@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>ProActive</title>
+</head>
+<body style="width: 20rem; height: 25rem;">
+    <h1 class="text-3xl font-bold underline">ProActive</h1>
+    <div class="flex items-center justify-between w-full px-4 mt-4">
+        <label for="bossModeToggle" class="text-xl font-semibold mr-4">Boss Mode</label>
+        <div class="relative inline-block w-12 h-6 align-middle">
+            <input type="checkbox" id="bossModeToggle" class="sr-only peer">
+            <div class="w-full h-full bg-gray-300 rounded-full peer-checked:bg-blue-500 transition"></div>
+            <div class="absolute w-4 h-4 bg-white rounded-full shadow-md transition-all peer-checked:translate-x-6 top-1 left-1"></div>
+        </div>
+    </div>    
+    <div class="timer-container">
+        <script src="../backend/index.js" type="module"></script>
+    </div>
+    
+    <!-- Add Chat Interface -->
+    <div id="chat-container" class="w-full p-4">
+        <div id="chat-messages" class="h-[200px] overflow-y-auto mb-4 p-2 border rounded bg-white"></div>
+        <form id="chat-form" class="flex gap-2">
+            <input 
+                id="user-input" 
+                type="text" 
+                class="flex-1 p-2 border rounded" 
+                placeholder="Type your message..."
+            >
+            <button type="submit" class="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                Send
+            </button>
+        </form>
+    </div>
+
+    <!-- Add Chat.js script -->
+    <script src="chat.js" type="module"></script>
+</body>
+</html>
